@@ -1,26 +1,27 @@
-<div class="displayTable">
+<div class="login-form">
     <div class="displayTableCell">
-
-      <div class="authBlock">
-        <h3>Gracias por registrarte</h3>
-
+      <form >
+      <div>
+        <h2 class="text-center">Gracias por registrarte!! :D</h2>
+        <div class="or-seperator"><i>x</i></div>
         <div class="formGroup" *ngIf="usuarioService.usuarioDatos as usuario">
-          <p class="text-center">Ya enviamos un correo de verificación a <strong>{{usuario.correo}}</strong>.</p>
+          <p class="text-center">Ya enviamos un correo de verificación a <strong>{{usuario.email}}</strong>.</p>
           <p class="text-center">Por favor verifica tu correo y da clic al link!</p>
         </div>
 
         <!-- Calling SendVerificationMail() method using authService Api -->
-        <div class="formGroup">
-          <button type="button" class="btn btnPrimary" (click)="usuarioService.MandarVerificacion()">
+        <div class="hint-text small">
+          <!--<button type="button" class="btn btn-Primary" (click)="usuarioService.MandarVerificacion()">
             <i class="fas fa-redo-alt"></i>
             Reenvia la verificación
-          </button>
+          </button>-->
+          No se envio el correo? <a href="#" class="text-success" (click)="usuarioService.MandarVerificacion()">Reenvialo ahora!</a>
         </div>
 
       </div>
-
+      </form>
       <div class="redirectToLogin">
-        <span>Regresar<span class="redirect" routerLink="/iniciar-sesion"> Iniciar Sesion</span></span>
+        <div class="hint-text small">Regresar ? <a href="#" class="text-success" routerLink="/inicia-sesion">Iniciar sesion</a></div>
       </div>
     </div>
 </div>
