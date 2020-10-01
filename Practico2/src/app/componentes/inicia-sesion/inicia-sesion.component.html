@@ -1,0 +1,31 @@
+<div class="login-form">
+    <form >
+        <h2 class="text-center">Iniciar sesión</h2>		
+        <div class="text-center social-btn">
+			<button type="button" class="btn btn-danger btn-block" (click)="usuarioService.GoogleAuth()"><i class="fa fa-google"></i> Iniciar con <b>Google</b></button>>
+        </div>
+		<div class="or-seperator"><i>ó</i></div>
+        <div class="form-group">
+        	<div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="correo" placeholder="Correo" required #correo>
+            </div>
+        </div>
+		<div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required #contrasena>
+            </div>
+        </div>        
+        <div class="form-group">
+            <input type="button" class="btn btn-success btn-block login-btn" (click)="usuarioService.IniciarSesion(correo.value , contrasena.value)" value="Inicar sesión">
+        </div>
+        <!--
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+            <a href="#" class="pull-right text-success">Forgot Password?</a>
+        </div>-->  
+        
+    </form>
+    <div class="hint-text small">Veterinario nuevo? <a href="#" class="text-success" routerLink="/registrate">Registrate ahora!!</a></div>
+</div>
