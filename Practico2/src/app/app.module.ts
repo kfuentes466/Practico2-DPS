@@ -15,6 +15,12 @@ import { environment } from '../environments/environment';
 
 import { UsuarioService } from './servicios/usuario.service';
 import { VrificarCorreoComponent } from './componentes/vrificar-correo/vrificar-correo.component';
+
+//Toastr, para notificaciones en angular
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,9 @@ import { VrificarCorreoComponent } from './componentes/vrificar-correo/vrificar-
     AngularFireModule.initializeApp(environment.firebase),
     //AngularFireAuth,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
