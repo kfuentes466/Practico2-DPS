@@ -1,0 +1,31 @@
+
+<table class="table" style="width:80%; margin:auto;"  >
+    <thead class="thead-light" >
+      <tr>
+        <th scope="col">DUI</th>
+        <th scope="col">Dueño</th>
+        <th scope="col">Mascota</th>
+        <th scope="col">Tratamiento</th>
+        <th scope="col">Medicamento</th>
+        <th scope="col">Veterinario</th>
+        <th scope="col">N° Consulta</th>
+        <th scope="col">Precio</th>
+        <th scope="col">TT a pagar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tvet of clienteLista">
+          <td>{{tvet.dui}}</td>
+        <td>{{tvet.nombre}}</td>
+        <td>{{tvet.mascota}}</td>
+        <td>{{tvet.tratamiento}}</td>
+        <td>{{tvet.medicamento}}</td>
+        <td>{{tvet.atendido}}</td>
+        <td>{{tvet.consulta}}</td>
+        <td>{{tvet.precio}}</td>
+        <td>{{tvet.ttpagar}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  

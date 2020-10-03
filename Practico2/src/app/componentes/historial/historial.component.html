@@ -1,0 +1,76 @@
+ 
+      <strong><h2 class="text-info" style="text-align:center">CONTROL DE PACIENTES</h2></strong>
+      <p class="text-info" style="text-align:center">Historial de mascotas atendidas en el día</p>
+    
+      <div class="col-10" style="margin:auto">
+ 
+      <div class="card card-primary">
+      <div class="card-header bg-danger text-white">
+        <h4 class="card-title">Agregar Consultas</h4></div>
+<form #clienteForm="ngForm" (ngSubmit)="onSubmit(clienteForm)" name="clienteForm">
+<div class="card-body">
+  <div class="row justify-content-md-center">
+    <div class="col-3">
+      
+      <input type="hidden" name="$key" #$key="ngModel"       [(ngModel)]="clienteService.seleccionadoCliente.$key">
+      <input type="hidden" name="consulta" #consulta="ngModel"   [(ngModel)]="clienteService.seleccionadoCliente.consulta">
+      <input type="hidden" name="ttpagar" #ttpagar="ngModel" [(ngModel)]="clienteService.seleccionadoCliente.ttpagar">  
+      <div class="form-group">
+            <label class="text-info">DUI del Dueño:</label>
+            <input type="text" class="form-control" name="dui" #dui="ngModel" [(ngModel)]="clienteService.seleccionadoCliente.dui" maxlength="10" placeholder="########-#">
+          </div>
+      
+          <div class="form-group">
+              <label class="text-info">Medicamento:</label>
+              <input type="text" class="form-control" #medicamento="ngModel" name="medicamento" [(ngModel)]="clienteService.seleccionadoCliente.medicamento">
+            </div>
+
+      </div>
+
+      <div class="col-3">
+          <div class="form-group">
+              <label class="text-info">Nombre del Dueño:</label>
+              <input type="text" class="form-control" #nombre="ngModel" name="nombre" [(ngModel)]="clienteService.seleccionadoCliente.nombre" aria-describedby="emailHelp" >
+            </div>
+           
+            <div class="form-group">
+                <label class="text-info">Veterinario que le atendió:</label>
+                <input type="text" class="form-control" #atendido="ngModel" name="atendido" [(ngModel)]="clienteService.seleccionadoCliente.atendido">
+              </div>
+
+      </div>
+      <div class="col-3">
+          <div class="form-group">
+              <label class="text-info">Nombre de la Mascota:</label>
+              <input type="text" class="form-control" name="mascota" #mascota="ngModel" [(ngModel)]="clienteService.seleccionadoCliente.mascota">
+          </div>
+          <div class="form-group">
+              <label class="text-info">Precio por consulta:</label>
+              <input type="number" class="form-control" #precio="ngModel" name="precio" [(ngModel)]="clienteService.seleccionadoCliente.precio" placeholder="$">
+          </div>
+            <!--div class="form-group">
+                <label class="text-info">N° de Visita:</label>
+                <input type="number" class="form-control" [(ngModel)]="visita">
+              </div-->
+           
+      </div>
+
+      
+        <div class="col-3">
+          
+          <div class="form-group">
+              <label class="text-info">Tratamiento:</label>
+              <input type="text" #tratamiento="ngModel" name="tratamiento" class="form-control" [(ngModel)]="clienteService.seleccionadoCliente.tratamiento">
+            </div>                                            
+        </div>
+      
+      </div>
+  </div>
+  <div class="card-footer" >
+      <button type="submit" class="btn btn-outline-info">Registrar Consulta</button>
+
+  </div>
+</form>
+ 
+</div>
+</div>
