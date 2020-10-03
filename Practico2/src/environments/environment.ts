@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: "AIzaSyDmFQd72jjghP2UKghjpUm2sfIe-RFIcQU",
-    authDomain: "practico2-dps.firebaseapp.com",
-    databaseURL: "https://practico2-dps.firebaseio.com",
-    projectId: "practico2-dps",
-    storageBucket: "practico2-dps.appspot.com",
-    messagingSenderId: "644003629410",
-    appId: "1:644003629410:web:0966c5836d41d65561c43b",
-    measurementId: "G-KJXE48J97S"
+    apiKey: "AIzaSyBDSV8SwRzFwzUoLYP1fPouzM6ifUIOv-U",
+    authDomain: "practico-2-dps.firebaseapp.com",
+    databaseURL: "https://practico-2-dps.firebaseio.com",
+    projectId: "practico-2-dps",
+    storageBucket: "practico-2-dps.appspot.com",
+    messagingSenderId: "1045968125310",
+    appId: "1:1045968125310:web:738fa81986449538dd472f",
+    measurementId: "G-Z93CJPKQL4"
   }
 };
 
