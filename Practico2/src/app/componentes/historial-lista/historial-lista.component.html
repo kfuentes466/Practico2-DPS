@@ -2,6 +2,7 @@
 <table class="table" style="width:80%; margin:auto;"  >
     <thead class="thead-light" >
       <tr>
+        <th scope="col">KEY</th>
         <th scope="col">DUI</th>
         <th scope="col">Dueño</th>
         <th scope="col">Mascota</th>
@@ -14,16 +15,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tvet of clienteLista">
-          <td>{{tvet.dui}}</td>
-        <td>{{tvet.nombre}}</td>
-        <td>{{tvet.mascota}}</td>
-        <td>{{tvet.tratamiento}}</td>
-        <td>{{tvet.medicamento}}</td>
-        <td>{{tvet.atendido}}</td>
-        <td>{{tvet.consulta}}</td>
-        <td>{{tvet.precio}}</td>
-        <td>{{tvet.ttpagar}}</td>
+      <tr *ngFor="let cliente of clienteLista">
+        <td>{{cliente.$key}}</td>
+        <td>{{cliente.dui}}</td>
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.mascota}}</td>
+        <td>{{cliente.tratamiento}}</td>
+        <td>{{cliente.medicamento}}</td>
+        <td>{{cliente.atendido}}</td>
+        <td>{{cliente.consulta}}</td>
+        <td>{{cliente.precio}}</td>
+        <td>{{cliente.ttpagar}}</td>
+        <td><a class="btn btn-secondary text-white" (click)="onEditar(cliente)">
+          <i class="far fa-edit"></i></a>
+        </td>
       </tr>
       
     </tbody>
