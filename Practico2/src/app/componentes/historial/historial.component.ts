@@ -28,7 +28,7 @@ export class HistorialComponent implements OnInit {
       if(clienteForm.value.$key == null){
         clienteForm.value.consulta = 1;
         clienteForm.value.ttpagar = clienteForm.value.precio;
-        window.alert(clienteForm.value.nombre);
+        
         this.clienteService.insertarCliente(clienteForm.value);
         this.toastr.success('Cliente agregado de manera exitosa!', 'Cliente agregado');
       }else{

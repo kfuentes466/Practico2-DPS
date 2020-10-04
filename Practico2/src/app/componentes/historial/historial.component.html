@@ -12,9 +12,8 @@
   <div class="row justify-content-md-center">
     <div class="col-3">
       
-      <input type="hidden" name="$key" #$key="ngModel"       [(ngModel)]="clienteService.seleccionadoCliente.$key">
-      <input type="hidden" name="consulta" #consulta="ngModel"   [(ngModel)]="clienteService.seleccionadoCliente.consulta">
-      <input type="hidden" name="ttpagar" #ttpagar="ngModel" [(ngModel)]="clienteService.seleccionadoCliente.ttpagar">  
+      <input type="hidden" name="$key" #$key="ngModel"    [(ngModel)]="clienteService.seleccionadoCliente.$key">
+ 
       <div class="form-group">
             <label class="text-info">DUI del Dueño:</label>
             <input type="text" class="form-control" name="dui" #dui="ngModel" [(ngModel)]="clienteService.seleccionadoCliente.dui" maxlength="10" placeholder="########-#">
