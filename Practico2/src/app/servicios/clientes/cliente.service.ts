@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Subject } from 'rxjs';
 
 import { Cliente } from '../../modelos/clientes/cliente';
+import { Query } from '@firebase/firestore-types';
 
 @Injectable({
   providedIn: 'root'
@@ -116,4 +118,6 @@ export class ClienteService {
    traerClietes(){
     return this.clienteLista = this.firebase.list('clientes');
    }
+
+  
 }
