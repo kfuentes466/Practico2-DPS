@@ -9,5 +9,5 @@ export class Cliente {
   consulta:number;
   precio : number;
   ttpagar: number;
-  visita: number;
+ 
 }
