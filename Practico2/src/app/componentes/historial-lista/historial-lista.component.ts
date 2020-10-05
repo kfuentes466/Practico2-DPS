@@ -34,7 +34,7 @@ export class HistorialListaComponent implements OnInit {
       this.clienteLista = [];
       item.forEach(element => {
         let x = element.payload.toJSON();
-        x["$Key"] = element.key;
+        x["$key"] = element.key;
         this.clienteLista.push(x as Cliente);
       });
     });

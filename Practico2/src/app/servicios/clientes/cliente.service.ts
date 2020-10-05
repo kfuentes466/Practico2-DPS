@@ -48,7 +48,7 @@ export class ClienteService {
       consulta : cliente.consulta,
       precio : cliente.precio,
       ttpagar: cliente.ttpagar
-     })
+     });
    }
 
    traerClietes(){
