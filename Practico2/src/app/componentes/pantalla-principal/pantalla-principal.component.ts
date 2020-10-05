@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
+import { UsuarioService } from '../../servicios/usuario.service';
+
+
 @Component({
   selector: 'app-pantalla-principal',
   templateUrl: './pantalla-principal.component.html',
@@ -8,7 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class PantallaPrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public usuarioService : UsuarioService) { }
+
 
   ngOnInit(): void {
   }
