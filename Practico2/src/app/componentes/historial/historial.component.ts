@@ -24,6 +24,7 @@ export class HistorialComponent implements OnInit {
     this.clienteService.traerClietes();
     this.resetForm();
     this.cargarDatos();
+    this.resetForm();
   }
 
   onSubmit(clienteForm: NgForm){

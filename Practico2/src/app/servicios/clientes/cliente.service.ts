@@ -10,18 +10,13 @@ import { Query } from '@firebase/firestore-types';
   providedIn: 'root'
 })
 export class ClienteService {
-  historial=[];
-  dui:string;
-  consulta:any;
-  error:number;
-  contador:number;
-  descuento:number;
+  
   clienteLista: AngularFireList<any>;
   seleccionadoCliente: Cliente = new Cliente();
+
   constructor(private firebase: AngularFireDatabase) {}
 
    insertarCliente(cliente: Cliente){
-   
         this.clienteLista.push({
           dui: cliente.dui, 
           nombre: cliente.nombre,
@@ -32,7 +27,6 @@ export class ClienteService {
           consulta : cliente.consulta,
           precio : cliente.precio,
           ttpagar: cliente.ttpagar
-         
         });
    }
    

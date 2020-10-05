@@ -21,8 +21,8 @@ export class HistorialListaComponent implements OnInit {
 
 
   constructor(
-    public clienteService : ClienteService,
-    public tostr: ToastrService
+    private clienteService : ClienteService,
+    private tostr: ToastrService
   ) { }
 
   ngOnInit(){
