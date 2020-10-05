@@ -1,31 +1,55 @@
-<div class="login-form">
-    <form >
-        <h2 class="text-center">Iniciar sesión</h2>		
-        <div class="text-center social-btn">
-			<button type="button" class="btn btn-danger btn-block" (click)="usuarioService.GoogleAuth()"><i class="fa fa-google"></i> Iniciar con <b>Google</b></button>>
+<nav class="navbar navbar-light bg-danger ">
+    <span class="navbar-brand mb-0 h1 text-white">DPS VET</span>
+
+   
+</nav>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <img width="500" alt="DPSVET Logo" style=" margin-top: 8%;" src="https://static.vecteezy.com/system/resources/previews/000/368/347/non_2x/vector-vet-and-many-injured-animals.jpg">
+      </div>
+
+     
+      <div class="col-md-7">
+          
+        <div class="login-form" style="margin-top: 8%; margin-left: 25%;">
+    
+            <form style="margin-left:6px;">
+                <h2 class="text-center">Iniciar sesión</h2>		
+                <div class="text-center social-btn">
+                    <button type="button" class="btn btn-danger btn-block" (click)="usuarioService.GoogleAuth()"><i class="fa fa-google"></i> Iniciar Sesión con <b>Google</b></button>
+                </div>
+                <div class="or-seperator"><i>ó</i></div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="correo" placeholder="Correo" required #correo>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon" ><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required #contrasena>
+                    </div>
+                </div>        
+                <div class="form-group">
+                    <input type="button" class="btn btn-success btn-block login-btn" (click)="usuarioService.IniciarSesion(correo.value , contrasena.value)" value="Iniciar sesión">
+                </div>
+                <!--
+                <div class="clearfix">
+                    <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                    <a href="#" class="pull-right text-success">Forgot Password?</a>
+                </div>-->  
+                
+            </form>
+            
+            <div  class="hint-text small">Veterinario nuevo? <a href="#" class="text-success" routerLink="/registrate">Registrate ahora!!</a></div>
         </div>
-		<div class="or-seperator"><i>ó</i></div>
-        <div class="form-group">
-        	<div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="correo" placeholder="Correo" required #correo>
-            </div>
+          
         </div>
-		<div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required #contrasena>
-            </div>
-        </div>        
-        <div class="form-group">
-            <input type="button" class="btn btn-success btn-block login-btn" (click)="usuarioService.IniciarSesion(correo.value , contrasena.value)" value="Inicar sesión">
-        </div>
-        <!--
-        <div class="clearfix">
-            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="#" class="pull-right text-success">Forgot Password?</a>
-        </div>-->  
-        
-    </form>
-    <div class="hint-text small">Veterinario nuevo? <a href="#" class="text-success" routerLink="/registrate">Registrate ahora!!</a></div>
+
+    </div>
 </div>
+
+
