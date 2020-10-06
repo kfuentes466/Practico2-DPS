@@ -13,6 +13,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "devextreme-angular",
+              "devextreme",
+              "@firebase",
+              "@angular/fire",
+              "devexpress-richedit",
+              "x-data-spreadsheet"
+              
+          ],
+          
             "outputPath": "dist/Practico2",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -128,6 +139,6 @@
   },
   "defaultProject": "Practico2",
   "cli": {
-    "analytics": "9fe8e188-6be0-4449-bb69-e36a4a2fc6d3"
+    "analytics": false
   }
 }
